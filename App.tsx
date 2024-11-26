@@ -1,10 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import {TestService} from "packages/common/services/testService";
+
 
 export default function App() {
+
+  const sayHello = TestService.sayHello()
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>{sayHello}</Text>
       <StatusBar style="auto" />
     </View>
   );
